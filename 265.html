@@ -1,0 +1,937 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" 
+"http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd" > 
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>MeasurementSet VLBI extensions</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (https://tug.org/tex4ht/)" /> 
+<!-- xhtml,mathml,fn-in,css-in,charset=utf-8,html --> 
+<meta name="src" content="265.tex" /> 
+ 
+<style type="text/css"> 
+<!--  
+ 
+/* start css.sty */  
+.cmr-5{font-size:50%;}  
+.cmr-7{font-size:70%;}  
+.cmmi-5{font-size:50%;font-style: italic;}  
+.cmmi-7{font-size:70%;font-style: italic;}  
+.cmmi-10{font-style: italic;}  
+.cmsy-5{font-size:50%;}  
+.cmsy-7{font-size:70%;}  
+.cmbx-10{ font-weight: bold;}  
+.cmbx-10{ font-weight: bold;}  
+.cmbsy-10{font-weight: bold;}  
+.cmbsy-10{font-weight: bold;}  
+.cmbsy-10{font-weight: bold;}  
+.cmbsy-7{font-size:70%;font-weight: bold;}  
+.cmbsy-7{font-weight: bold;}  
+.cmbsy-7{font-weight: bold;}  
+.cmbsy-5{font-size:50%;font-weight: bold;}  
+.cmbsy-5{font-weight: bold;}  
+.cmbsy-5{font-weight: bold;}  
+.cmr-17{font-size:170%;}  
+.cmr-12{font-size:120%;}  
+.cmmi-6{font-size:60%;font-style: italic;}  
+.cmr-9{font-size:90%;}  
+.cmmi-9{font-size:90%;font-style: italic;}  
+.cmtt-9{font-size:90%;font-family: monospace,monospace;}  
+.cmbx-9{font-size:90%; font-weight: bold;}  
+.cmbx-9{ font-weight: bold;}  
+.cmti-9{font-size:90%; font-style: italic;}  
+p{margin-top:0;margin-bottom:0}  
+p.indent{text-indent:0;}  
+p + p{margin-top:1em;}  
+p + div, p + pre {margin-top:1em;}  
+div + p, pre + p {margin-top:1em;}  
+a { overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; hyphens: auto; }  
+@media print {div.crosslinks {visibility:hidden;}}  
+a img { border-top: 0; border-left: 0; border-right: 0; }  
+center { margin-top:1em; margin-bottom:1em; }  
+td center { margin-top:0em; margin-bottom:0em; }  
+.Canvas { position:relative; }  
+math { text-indent: 0em; }  
+li p.indent { text-indent: 0em }  
+li p:first-child{ margin-top:0em; }  
+li p:last-child, li div:last-child { margin-bottom:0.5em; }  
+li p~ul:last-child, li p~ol:last-child{ margin-bottom:0.5em; }  
+.enumerate1 {list-style-type:decimal;}  
+.enumerate2 {list-style-type:lower-alpha;}  
+.enumerate3 {list-style-type:lower-roman;}  
+.enumerate4 {list-style-type:upper-alpha;}  
+div.newtheorem { margin-bottom: 2em; margin-top: 2em;}  
+.obeylines-h,.obeylines-v {white-space: nowrap; }  
+div.obeylines-v p { margin-top:0; margin-bottom:0; }  
+.overline{ text-decoration:overline; }  
+.overline img{ border-top: 1px solid black; }  
+td.displaylines {text-align:center; white-space:nowrap;}  
+.centerline {text-align:center;}  
+.rightline {text-align:right;}  
+pre.verbatim {font-family: monospace,monospace; text-align:left; clear:both; }  
+.fbox {padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }  
+div.fbox {display:table}  
+div.center div.fbox {text-align:center; clear:both; padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }  
+div.minipage{width:100%;}  
+div.center, div.center div.center {text-align: center; margin-left:1em; margin-right:1em;}  
+div.center div {text-align: left;}  
+div.flushright, div.flushright div.flushright {text-align: right;}  
+div.flushright div {text-align: left;}  
+div.flushleft {text-align: left;}  
+.underline{ text-decoration:underline; }  
+.underline img{ border-bottom: 1px solid black; margin-bottom:1pt; }  
+.framebox-c, .framebox-l, .framebox-r { padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }  
+.framebox-c {text-align:center;}  
+.framebox-l {text-align:left;}  
+.framebox-r {text-align:right;}  
+span.thank-mark{ vertical-align: super }  
+span.footnote-mark sup.textsuperscript, span.footnote-mark a sup.textsuperscript{ font-size:80%; }  
+div.footnotes{border-top:solid 1px black; border-bottom:solid 1px black; padding-bottom:1ex; padding-top:0.5ex; margin-right:15%; margin-top:2ex; font-style:italic; font-size:85%;}  
+div.footnotes p{margin-top:0; margin-bottom:0; text-indent:0;}  
+div.tabular, div.center div.tabular {text-align: center; margin-top:0.5em; margin-bottom:0.5em; }  
+table.tabular td p{margin-top:0em;}  
+table.tabular {margin-left: auto; margin-right: auto;}  
+td p:first-child{ margin-top:0em; }  
+td p:last-child{ margin-bottom:0em; }  
+div.td00{ margin-left:0pt; margin-right:0pt; }  
+div.td01{ margin-left:0pt; margin-right:5pt; }  
+div.td10{ margin-left:5pt; margin-right:0pt; }  
+div.td11{ margin-left:5pt; margin-right:5pt; }  
+table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }  
+td.td00{ padding-left:0pt; padding-right:0pt; }  
+td.td01{ padding-left:0pt; padding-right:5pt; }  
+td.td10{ padding-left:5pt; padding-right:0pt; }  
+td.td11{ padding-left:5pt; padding-right:5pt; }  
+table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }  
+.hline hr, .cline hr{ height : 0px; margin:0px; }  
+.hline td, .cline td{ padding: 0; }  
+.hline hr, .cline hr{border:none;border-top:1px solid black;}  
+.tabbing-right {text-align:right;}  
+div.float, div.figure {margin-left: auto; margin-right: auto;}  
+div.float img {text-align:center;}  
+div.figure img {text-align:center;}  
+.marginpar,.reversemarginpar {width:20%; float:right; text-align:left; margin-left:auto; margin-top:0.5em; font-size:85%; text-decoration:underline;}  
+.marginpar p,.reversemarginpar p{margin-top:0.4em; margin-bottom:0.4em;}  
+.reversemarginpar{float:left;}  
+.equation td{text-align:center; vertical-align:middle; }  
+td.eq-no{ width:5%; }  
+table.equation { width:100%; }  
+div.math-display, div.par-math-display{text-align:center;}  
+mtr.hline mtd{ border-bottom:black solid 1px; padding-top:2px; padding-bottom:0em; }  
+mtr.hline mtd mo{ display:none }  
+math .texttt { font-family: monospace; }  
+math .textit { font-style: italic; }  
+math .textsl { font-style: oblique; }  
+math .textsf { font-family: sans-serif; }  
+math .textbf { font-weight: bold; }  
+mo.MathClass-op + mi{margin-left:0.3em}  
+mi + mo.MathClass-op{margin-left:0.3em}  
+math mstyle[mathvariant="bold"] { font-weight: bold; font-style: normal; }  
+math mstyle[mathvariant="normal"] { font-weight: normal; font-style: normal; }  
+.partToc a, .partToc, .likepartToc a, .likepartToc {line-height: 200%; font-weight:bold; font-size:110%;}  
+.chapterToc a, .chapterToc, .likechapterToc a, .likechapterToc, .appendixToc a, .appendixToc {line-height: 200%; font-weight:bold;}  
+.index-item, .index-subitem, .index-subsubitem {display:block}  
+div.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:left;}  
+div.caption span.id{font-weight: bold; white-space: nowrap; }  
+h1.partHead{text-align: center}  
+p.bibitem { text-indent: -2em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }  
+p.bibitem-p { text-indent: 0em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }  
+.paragraphHead, .likeparagraphHead { margin-top:2em; font-weight: bold;}  
+.subparagraphHead, .likesubparagraphHead { font-weight: bold;}  
+.verse{white-space:nowrap; margin-left:2em}  
+div.maketitle {text-align:center;}  
+h2.titleHead{text-align:center;}  
+div.maketitle{ margin-bottom: 2em; }  
+div.author, div.date {text-align:center;}  
+div.thanks{text-align:left; margin-left:10%; font-size:85%; font-style:italic; }  
+div.abstract p {margin-left:5%; margin-right:5%;}  
+div.abstract {width:100%;}  
+.abstracttitle{text-align:center;margin-bottom:1em;}  
+/* end css.sty */  
+ 
+ 
+--> 
+</style> 
+</head><body 
+>
+   <div class="maketitle">
+                                                                                         
+
+                                                                                         
+                                                                                         
+
+                                                                                         
+
+<h2 class="titleHead">MeasurementSet VLBI extensions</h2>
+<div class="author" ><span 
+class="cmr-12">Kettenis M.M.</span></div>
+<br />
+<div class="date" ><span 
+class="cmr-12">November, 2023</span></div>
+   </div>
+<!--l. 59--><p class="indent" >   <a 
+href="265.pdf" >A pdf version of this note is available.</a>
+</p>
+   <h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Contents</h3>
+   <div class="tableofcontents">
+    <span class="sectionToc" >1 <a 
+href="#x1-20001" id="QQ2-1-2">Introduction</a></span>
+<br />    <span class="sectionToc" >2 <a 
+href="#x1-30002" id="QQ2-1-3">VLBI metadata tables</a></span>
+<br />     <span class="subsectionToc" >2.1 <a 
+href="#x1-40001" id="QQ2-1-4">GAIN_CURVE: Antenna gain curves</a></span>
+<br />     <span class="subsectionToc" >2.2 <a 
+href="#x1-50002" id="QQ2-1-5">PHASE_CAL: Phase calibration measurements</a></span>
+<br />     <span class="subsectionToc" >2.3 <a 
+href="#x1-60003" id="QQ2-1-6">EARTH_ORIENTATION: Earth orientation parameters</a></span>
+<br />    <span class="sectionToc" >3 <a 
+href="#x1-70003" id="QQ2-1-7">References</a></span>
+   </div>
+<a 
+ id="x1-1001r1"></a>
+   <h3 class="sectionHead"><span class="titlemark">1   </span> <a 
+ id="x1-20001"></a>Introduction</h3>
+<!--l. 68--><p class="noindent" >The MeasurementSet (MS) deﬁnes a format in which interferometer visibilities and single-dish data are
+stored. It is implemented in software packages using casacore code. Version 2.0 (Note 229; Kemball and
+Wieringa 2000) of the MeasurementSet has been in use since 2000 in diﬀerent packages and at diﬀerent
+telescopes.
+</p><!--l. 74--><p class="indent" >   Recent developments to add VLBI capabilities to CASA revealed some gaps in the metadata provided by MS
+                                                                                         
+
+                                                                                         
+V2.0. To ﬁll these gaps additional tables have been deﬁned and implemented in casacore. These extension tables are
+ﬁlled by the code that implements the conversion from FITS-IDI to MS. This follows the existing practice
+established by the code that converts from ASDM to MS that is provided in CASA where several ASDM-speciﬁc
+tables are stored in MS form with names wit an ASDM_ preﬁx.
+</p><!--l. 83--><p class="indent" >   The following new tables are deﬁned:
+</p>
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="cmbx-10">GAIN</span><span 
+class="cmbx-10">_CURVE: </span>Antenna gain curves
+     </li>
+     <li class="itemize"><span 
+class="cmbx-10">PHASE</span><span 
+class="cmbx-10">_CAL: </span>Phase calibration measurements
+     </li>
+     <li class="itemize"><span 
+class="cmbx-10">EARTH</span><span 
+class="cmbx-10">_ORIENTATION: </span>Earth Orientation Parameters
+     </li></ul>
+<a 
+ id="x1-2001r2"></a>
+   <h3 class="sectionHead"><span class="titlemark">2   </span> <a 
+ id="x1-30002"></a>VLBI metadata tables</h3>
+<!--l. 98--><p class="noindent" >This section contains a description of the VLBI metadata tables. These tables are stored as subtables of the
+MS and like the standard subtables these are stored as keywords of the MS. All these subtables are
+optional.
+</p><!--l. 118--><p class="indent" >
+                                                                                         
+
+                                                                                         
+<a 
+ id="x1-3001r1"></a>
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">2.1   </span> <a 
+ id="x1-40001"></a>GAIN_CURVE: Antenna gain curves</h4>
+   <div class="tabular"> <table id="TBL-2" class="tabular" 
+rules="groups" 
+><colgroup id="TBL-2-1g"><col 
+id="TBL-2-1" /></colgroup><colgroup id="TBL-2-2g"><col 
+id="TBL-2-2" /></colgroup><colgroup id="TBL-2-3g"><col 
+id="TBL-2-3" /></colgroup><colgroup id="TBL-2-4g"><col 
+id="TBL-2-4" /></colgroup><colgroup id="TBL-2-5g"><col 
+id="TBL-2-5" /></colgroup><tr 
+class="hline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-1-"><td colspan="5" style="text-align:center; white-space:nowrap;" id="TBL-2-1-1"  
+class="td11">                           <div class="multicolumn"  style="text-align:center; white-space:nowrap;"><span 
+class="cmbx-9">GAIN</span><span 
+class="cmbx-9">_CURVE: Antenna gain curves</span></div>
+</td></tr><tr 
+class="cline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-3-"><td  style="text-align:center; white-space:nowrap;" id="TBL-2-3-1"  
+class="td11">          <div class="multicolumn"  style="text-align:center; white-space:nowrap;"><span 
+class="cmr-9">Name</span></div>               </td><td  style="text-align:center; white-space:nowrap;" id="TBL-2-3-2"  
+class="td11">      <div class="multicolumn"  style="text-align:center; white-space:nowrap;"><span 
+class="cmr-9">Format</span></div>          </td><td  style="text-align:center; white-space:nowrap;" id="TBL-2-3-3"  
+class="td11"><div class="multicolumn"  style="text-align:center; white-space:nowrap;"><span 
+class="cmr-9">Units</span></div></td><td  style="text-align:center; white-space:nowrap;" id="TBL-2-3-4"  
+class="td11">   <div class="multicolumn"  style="text-align:center; white-space:nowrap;"><span 
+class="cmr-9">Measure</span></div>     </td><td  style="text-align:center; white-space:nowrap;" id="TBL-2-3-5"  
+class="td11">      <div class="multicolumn"  style="text-align:center; white-space:nowrap;"><span 
+class="cmr-9">Comments</span></div>
+</td></tr><tr 
+class="cline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr 
+class="cline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-6-"><td colspan="5" style="text-align:left; white-space:nowrap;" id="TBL-2-6-1"  
+class="td11"><div class="multicolumn"  style="text-align:left; white-space:nowrap;"><span 
+class="cmbx-9">Columns</span></div></td></tr><tr 
+class="cline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr 
+class="cline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-9-"><td colspan="5" style="text-align:left; white-space:nowrap;" id="TBL-2-9-1"  
+class="td11"><div class="multicolumn"  style="text-align:left; white-space:nowrap;"><span 
+class="cmbx-9">Keys</span></div>
+</td></tr><tr 
+class="cline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-11-"><td  style="text-align:left; white-space:nowrap;" id="TBL-2-11-1"  
+class="td11"><span 
+class="cmr-9">ANTENNA</span><span 
+class="cmr-9">_ID                 </span></td><td  style="text-align:left;" id="TBL-2-11-2"  
+class="td11"><!--l. 118--><p class="noindent" ><span 
+class="cmr-9">Int</span>                         </p></td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-11-3"  
+class="td11">     </td><td  style="text-align:left;" id="TBL-2-11-4"  
+class="td11"><!--l. 118--><p class="noindent" >              </p></td><td  style="text-align:left;" id="TBL-2-11-5"  
+class="td11"><!--l. 118--><p class="noindent" ><span 
+class="cmr-9">Antenna id.</span>                 </p></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-12-"><td  style="text-align:left; white-space:nowrap;" id="TBL-2-12-1"  
+class="td11"><span 
+class="cmr-9">FEED</span><span 
+class="cmr-9">_ID                        </span></td><td  style="text-align:left;" id="TBL-2-12-2"  
+class="td11"><!--l. 118--><p class="noindent" ><span 
+class="cmr-9">Int</span>                         </p></td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-12-3"  
+class="td11">     </td><td  style="text-align:left;" id="TBL-2-12-4"  
+class="td11"><!--l. 118--><p class="noindent" >              </p></td><td  style="text-align:left;" id="TBL-2-12-5"  
+class="td11"><!--l. 118--><p class="noindent" ><span 
+class="cmr-9">Feed id.</span>                      </p></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-13-"><td  style="text-align:left; white-space:nowrap;" id="TBL-2-13-1"  
+class="td11"><span 
+class="cmr-9">SPECTRAL</span><span 
+class="cmr-9">_WINDOW</span><span 
+class="cmr-9">_ID</span></td> <td  style="text-align:left;" id="TBL-2-13-2"  
+class="td11"><!--l. 118--><p class="noindent" ><span 
+class="cmr-9">Int</span> </p> </td> <td  style="text-align:left; white-space:nowrap;" id="TBL-2-13-3"  
+class="td11"> </td> <td  style="text-align:left;" id="TBL-2-13-4"  
+class="td11"><!--l. 118--><p class="noindent" > </p> </td> <td  style="text-align:left;" id="TBL-2-13-5"  
+class="td11"><!--l. 118--><p class="noindent" ><span 
+class="cmr-9">Spectral window id.</span></p></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-14-"><td  style="text-align:left; white-space:nowrap;" id="TBL-2-14-1"  
+class="td11"><span 
+class="cmr-9">TIME                             </span></td><td  style="text-align:left;" id="TBL-2-14-2"  
+class="td11"><!--l. 118--><p class="noindent" ><span 
+class="cmr-9">Double</span>                    </p></td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-14-3"  
+class="td11"><span 
+class="cmr-9">s      </span></td><td  style="text-align:left;" id="TBL-2-14-4"  
+class="td11"><!--l. 118--><p class="noindent" ><span 
+class="cmr-9">EPOCH</span>          </p></td><td  style="text-align:left;" id="TBL-2-14-5"  
+class="td11"><!--l. 118--><p class="noindent" ><span 
+class="cmr-9">Interval midpoint</span>          </p></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-15-"><td  style="text-align:left; white-space:nowrap;" id="TBL-2-15-1"  
+class="td11"><span 
+class="cmr-9">INTERVAL                      </span></td><td  style="text-align:left;" id="TBL-2-15-2"  
+class="td11"><!--l. 118--><p class="noindent" ><span 
+class="cmr-9">Double</span>                    </p></td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-15-3"  
+class="td11"><span 
+class="cmr-9">s      </span></td><td  style="text-align:left;" id="TBL-2-15-4"  
+class="td11"><!--l. 118--><p class="noindent" >              </p></td><td  style="text-align:left;" id="TBL-2-15-5"  
+class="td11"><!--l. 118--><p class="noindent" ><span 
+class="cmr-9">Time interval</span>               </p></td></tr><tr 
+class="cline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-17-"><td colspan="5" style="text-align:left; white-space:nowrap;" id="TBL-2-17-1"  
+class="td11"><div class="multicolumn"  style="text-align:left; white-space:nowrap;"><span 
+class="cmti-9">Data description</span></div>
+</td></tr><tr 
+class="cline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-19-"><td  style="text-align:left; white-space:nowrap;" id="TBL-2-19-1"  
+class="td11"><span 
+class="cmr-9">TYPE                            </span></td><td  style="text-align:left;" id="TBL-2-19-2"  
+class="td11"><!--l. 118--><p class="noindent" ><span 
+class="cmr-9">String</span>                     </p></td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-19-3"  
+class="td11">     </td><td  style="text-align:left;" id="TBL-2-19-4"  
+class="td11"><!--l. 118--><p class="noindent" >              </p></td><td  style="text-align:left;" id="TBL-2-19-5"  
+class="td11"><!--l. 118--><p class="noindent" ><span 
+class="cmr-9">Gain curve type</span>            </p></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-20-"><td  style="text-align:left; white-space:nowrap;" id="TBL-2-20-1"  
+class="td11"><span 
+class="cmr-9">NUM</span><span 
+class="cmr-9">_POLY                    </span></td><td  style="text-align:left;" id="TBL-2-20-2"  
+class="td11"><!--l. 118--><p class="noindent" ><span 
+class="cmr-9">Int</span>                         </p></td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-20-3"  
+class="td11">     </td><td  style="text-align:left;" id="TBL-2-20-4"  
+class="td11"><!--l. 118--><p class="noindent" >              </p></td><td  style="text-align:left;" id="TBL-2-20-5"  
+class="td11"><!--l. 118--><p class="noindent" ><span 
+class="cmr-9"># Series order</span>              </p></td>
+</tr><tr 
+class="cline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-22-"><td colspan="5" style="text-align:left; white-space:nowrap;" id="TBL-2-22-1"  
+class="td11"><div class="multicolumn"  style="text-align:left; white-space:nowrap;"><span 
+class="cmti-9">Data</span></div>
+</td></tr><tr 
+class="cline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-24-"><td  style="text-align:left; white-space:nowrap;" id="TBL-2-24-1"  
+class="td11"><span 
+class="cmr-9">GAIN                             </span></td><td  style="text-align:left;" id="TBL-2-24-2"  
+class="td11"><!--l. 118--><p class="noindent" ><span 
+class="cmr-9">Float(</span><!--l. 118--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>N</mi><mi 
+>r</mi></math><span 
+class="cmr-9">,</span>
+<span 
+class="cmr-9">num</span><span 
+class="cmr-9">_poly)</span>               </p></td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-24-3"  
+class="td11">     </td><td  style="text-align:left;" id="TBL-2-24-4"  
+class="td11"><!--l. 118--><p class="noindent" >              </p></td><td  style="text-align:left;" id="TBL-2-24-5"  
+class="td11"><!--l. 118--><p class="noindent" ><span 
+class="cmr-9">Gain</span>                          </p></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-25-"><td  style="text-align:left; white-space:nowrap;" id="TBL-2-25-1"  
+class="td11"><span 
+class="cmr-9">SENSITIVITY                 </span></td><td  style="text-align:left;" id="TBL-2-25-2"  
+class="td11"><!--l. 118--><p class="noindent" ><span 
+class="cmr-9">Float(</span><!--l. 118--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>N</mi><mi 
+>r</mi></math><span 
+class="cmr-9">)</span> </p> </td> <td  style="text-align:left; white-space:nowrap;" id="TBL-2-25-3"  
+class="td11"><span 
+class="cmr-9">K/Jy</span></td><td  style="text-align:left;" id="TBL-2-25-4"  
+class="td11"><!--l. 118--><p class="noindent" >              </p></td><td  style="text-align:left;" id="TBL-2-25-5"  
+class="td11"><!--l. 118--><p class="noindent" ><span 
+class="cmr-9">Sensitivity</span>                   </p></td>
+</tr><tr 
+class="hline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-26-"><td  style="text-align:left; white-space:nowrap;" id="TBL-2-26-1"  
+class="td11">                        </td> </tr></table>
+</div>
+     <dl class="description"><dt class="description">
+<span 
+class="cmbx-9">Notes:</span> </dt><dd 
+class="description"><span 
+class="cmr-9">This sub-table contains antenna gain curves.</span><br 
+class="newline" /><span 
+class="cmr-9">For further discussion of this table see casacore </span><a 
+href="https://github.com/casacore/casacore/issues/1039" ><span 
+class="cmr-9">Issue 1029</span></a><span 
+class="cmr-9">.</span>
+     </dd><dt class="description">
+<span 
+class="cmbx-9">ANTENNA</span><span 
+class="cmbx-9">_ID</span> </dt><dd 
+class="description"><span 
+class="cmr-9">Antenna identiﬁer, as indexed by ANTENNA</span><!--l. 127--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi></math>
+     <span 
+class="cmr-9">from MAIN.</span>
+     </dd><dt class="description">
+<span 
+class="cmbx-9">FEED</span><span 
+class="cmbx-9">_ID</span> </dt><dd 
+class="description"><span 
+class="cmr-9">Feed identiﬁer, as indexed from FEED</span><!--l. 129--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi></math>
+     <span 
+class="cmr-9">in MAIN. A value of -1 indicates the row is valid for all feeds.</span>
+     </dd><dt class="description">
+<span 
+class="cmbx-9">SPECTRAL</span><span 
+class="cmbx-9">_WINDOW</span><span 
+class="cmbx-9">_ID</span> </dt><dd 
+class="description"><span 
+class="cmr-9">Spectral window identiﬁer. A value of -1 indicates the row is valid for all spectral</span>
+     <span 
+class="cmr-9">windows.</span>
+     </dd><dt class="description">
+<span 
+class="cmbx-9">TIME</span> </dt><dd 
+class="description"><span 
+class="cmr-9">Mid-point of the time interval over which the data in the row are valid. Required to use the same TIME</span>
+     <span 
+class="cmr-9">Measure reference as in MAIN.</span>
+     </dd><dt class="description">
+<span 
+class="cmbx-9">INTERVAL</span> </dt><dd 
+class="description"><span 
+class="cmr-9">Time interval.</span>
+     </dd><dt class="description">
+<span 
+class="cmbx-9">TYPE</span> </dt><dd 
+class="description"><span 
+class="cmr-9">Gain  curve  type.  Reserved  keywords  include:  (”POWER(EL)”  -  Power  as  a  function  of  elevation;</span>
+     <span 
+class="cmr-9">”POWER(ZA)” - Power as a function of zenith angle; ”VOLTAGE(EL)” - Voltage as a function of elevation;</span>
+     <span 
+class="cmr-9">”VOLTAGE(ZA)” - Voltage as a function of zenith angle).</span>
+     </dd><dt class="description">
+<span 
+class="cmbx-9">NUM</span><span 
+class="cmbx-9">_POLY</span> </dt><dd 
+class="description"><span 
+class="cmr-9">Series order for the GAIN column (number of terms in the gain curve polynomial).</span>
+                                                                                         
+
+                                                                                         
+     </dd><dt class="description">
+<span 
+class="cmbx-9">GAIN</span> </dt><dd 
+class="description"><span 
+class="cmr-9">Coeﬃcients of the polynomial that describes the (power or voltage) gain.</span>
+     </dd><dt class="description">
+<span 
+class="cmbx-9">SENSITIVITY</span> </dt><dd 
+class="description"><span 
+class="cmr-9">Sensitivity of the antenna expressed in K/Jy. This is what AIPS calls “DPFU”.</span>
+     </dd></dl>
+<!--l. 173--><p class="noindent" >
+                                                                                         
+
+                                                                                         
+<a 
+ id="x1-4001r4"></a>
+</p>
+   <h4 class="subsectionHead"><span class="titlemark"><span 
+class="cmr-9">2.2   </span></span> <a 
+ id="x1-50002"></a><span 
+class="cmr-9">PHASE</span><span 
+class="cmr-9">_CAL: Phase calibration measurements</span></h4>
+   <div class="tabular"> <table id="TBL-3" class="tabular" 
+rules="groups" 
+><colgroup id="TBL-3-1g"><col 
+id="TBL-3-1" /></colgroup><colgroup id="TBL-3-2g"><col 
+id="TBL-3-2" /></colgroup><colgroup id="TBL-3-3g"><col 
+id="TBL-3-3" /></colgroup><colgroup id="TBL-3-4g"><col 
+id="TBL-3-4" /></colgroup><colgroup id="TBL-3-5g"><col 
+id="TBL-3-5" /></colgroup><tr 
+class="hline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-1-"><td colspan="5" style="text-align:center; white-space:nowrap;" id="TBL-3-1-1"  
+class="td11">                      <div class="multicolumn"  style="text-align:center; white-space:nowrap;"><span 
+class="cmbx-9">PHASE</span><span 
+class="cmbx-9">_CAL: Phase calibration measurements</span></div></td></tr><tr 
+class="cline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-3-"><td  style="text-align:center; white-space:nowrap;" id="TBL-3-3-1"  
+class="td11">          <div class="multicolumn"  style="text-align:center; white-space:nowrap;"><span 
+class="cmr-9">Name</span></div>               </td><td  style="text-align:center; white-space:nowrap;" id="TBL-3-3-2"  
+class="td11">      <div class="multicolumn"  style="text-align:center; white-space:nowrap;"><span 
+class="cmr-9">Format</span></div>          </td><td  style="text-align:center; white-space:nowrap;" id="TBL-3-3-3"  
+class="td11"><div class="multicolumn"  style="text-align:center; white-space:nowrap;"><span 
+class="cmr-9">Units</span></div></td><td  style="text-align:center; white-space:nowrap;" id="TBL-3-3-4"  
+class="td11">   <div class="multicolumn"  style="text-align:center; white-space:nowrap;"><span 
+class="cmr-9">Measure</span></div>     </td><td  style="text-align:center; white-space:nowrap;" id="TBL-3-3-5"  
+class="td11">      <div class="multicolumn"  style="text-align:center; white-space:nowrap;"><span 
+class="cmr-9">Comments</span></div></td></tr><tr 
+class="cline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr 
+class="cline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-6-"><td colspan="5" style="text-align:left; white-space:nowrap;" id="TBL-3-6-1"  
+class="td11"><div class="multicolumn"  style="text-align:left; white-space:nowrap;"><span 
+class="cmbx-9">Columns</span></div>
+</td></tr><tr 
+class="cline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr 
+class="cline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-9-"><td colspan="5" style="text-align:left; white-space:nowrap;" id="TBL-3-9-1"  
+class="td11"><div class="multicolumn"  style="text-align:left; white-space:nowrap;"><span 
+class="cmbx-9">Keys</span></div>
+</td></tr><tr 
+class="cline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-11-"><td  style="text-align:left; white-space:nowrap;" id="TBL-3-11-1"  
+class="td11"><span 
+class="cmr-9">ANTENNA</span><span 
+class="cmr-9">_ID                 </span></td><td  style="text-align:left;" id="TBL-3-11-2"  
+class="td11"><!--l. 173--><p class="noindent" ><span 
+class="cmr-9">Int</span>                         </p></td><td  style="text-align:left; white-space:nowrap;" id="TBL-3-11-3"  
+class="td11">     </td><td  style="text-align:left;" id="TBL-3-11-4"  
+class="td11"><!--l. 173--><p class="noindent" >              </p></td><td  style="text-align:left;" id="TBL-3-11-5"  
+class="td11"><!--l. 173--><p class="noindent" ><span 
+class="cmr-9">Antenna id.</span>                 </p></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-12-"><td  style="text-align:left; white-space:nowrap;" id="TBL-3-12-1"  
+class="td11"><span 
+class="cmr-9">FEED</span><span 
+class="cmr-9">_ID                        </span></td><td  style="text-align:left;" id="TBL-3-12-2"  
+class="td11"><!--l. 173--><p class="noindent" ><span 
+class="cmr-9">Int</span>                         </p></td><td  style="text-align:left; white-space:nowrap;" id="TBL-3-12-3"  
+class="td11">     </td><td  style="text-align:left;" id="TBL-3-12-4"  
+class="td11"><!--l. 173--><p class="noindent" >              </p></td><td  style="text-align:left;" id="TBL-3-12-5"  
+class="td11"><!--l. 173--><p class="noindent" ><span 
+class="cmr-9">Feed id.</span>                      </p></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-13-"><td  style="text-align:left; white-space:nowrap;" id="TBL-3-13-1"  
+class="td11"><span 
+class="cmr-9">SPECTRAL</span><span 
+class="cmr-9">_WINDOW</span><span 
+class="cmr-9">_ID</span></td> <td  style="text-align:left;" id="TBL-3-13-2"  
+class="td11"><!--l. 173--><p class="noindent" ><span 
+class="cmr-9">Int</span> </p> </td> <td  style="text-align:left; white-space:nowrap;" id="TBL-3-13-3"  
+class="td11"> </td> <td  style="text-align:left;" id="TBL-3-13-4"  
+class="td11"><!--l. 173--><p class="noindent" > </p> </td> <td  style="text-align:left;" id="TBL-3-13-5"  
+class="td11"><!--l. 173--><p class="noindent" ><span 
+class="cmr-9">Spectral window id.</span></p></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-14-"><td  style="text-align:left; white-space:nowrap;" id="TBL-3-14-1"  
+class="td11"><span 
+class="cmr-9">TIME                             </span></td><td  style="text-align:left;" id="TBL-3-14-2"  
+class="td11"><!--l. 173--><p class="noindent" ><span 
+class="cmr-9">Double</span>                    </p></td><td  style="text-align:left; white-space:nowrap;" id="TBL-3-14-3"  
+class="td11"><span 
+class="cmr-9">s      </span></td><td  style="text-align:left;" id="TBL-3-14-4"  
+class="td11"><!--l. 173--><p class="noindent" ><span 
+class="cmr-9">EPOCH</span>          </p></td><td  style="text-align:left;" id="TBL-3-14-5"  
+class="td11"><!--l. 173--><p class="noindent" ><span 
+class="cmr-9">Interval midpoint</span>          </p></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-15-"><td  style="text-align:left; white-space:nowrap;" id="TBL-3-15-1"  
+class="td11"><span 
+class="cmr-9">INTERVAL                      </span></td><td  style="text-align:left;" id="TBL-3-15-2"  
+class="td11"><!--l. 173--><p class="noindent" ><span 
+class="cmr-9">Double</span>                    </p></td><td  style="text-align:left; white-space:nowrap;" id="TBL-3-15-3"  
+class="td11"><span 
+class="cmr-9">s      </span></td><td  style="text-align:left;" id="TBL-3-15-4"  
+class="td11"><!--l. 173--><p class="noindent" >              </p></td><td  style="text-align:left;" id="TBL-3-15-5"  
+class="td11"><!--l. 173--><p class="noindent" ><span 
+class="cmr-9">Time interval</span>               </p></td></tr><tr 
+class="cline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-17-"><td colspan="5" style="text-align:left; white-space:nowrap;" id="TBL-3-17-1"  
+class="td11"><div class="multicolumn"  style="text-align:left; white-space:nowrap;"><span 
+class="cmti-9">Data description</span></div>
+</td></tr><tr 
+class="cline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-19-"><td  style="text-align:left; white-space:nowrap;" id="TBL-3-19-1"  
+class="td11"><span 
+class="cmr-9">NUM</span><span 
+class="cmr-9">_TONES                  </span></td><td  style="text-align:left;" id="TBL-3-19-2"  
+class="td11"><!--l. 173--><p class="noindent" ><span 
+class="cmr-9">Int</span>                         </p></td><td  style="text-align:left; white-space:nowrap;" id="TBL-3-19-3"  
+class="td11">     </td><td  style="text-align:left;" id="TBL-3-19-4"  
+class="td11"><!--l. 173--><p class="noindent" >              </p></td><td  style="text-align:left;" id="TBL-3-19-5"  
+class="td11"><!--l. 173--><p class="noindent" ><span 
+class="cmr-9"># phase calibration tones</span></p></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-20-"><td  style="text-align:left; white-space:nowrap;" id="TBL-3-20-1"  
+class="td11"><span 
+class="cmr-9">TONE</span><span 
+class="cmr-9">_FREQUENCY       </span></td><td  style="text-align:left;" id="TBL-3-20-2"  
+class="td11"><!--l. 173--><p class="noindent" ><span 
+class="cmr-9">Double(num</span><span 
+class="cmr-9">_tones)</span>   </p></td><td  style="text-align:left; white-space:nowrap;" id="TBL-3-20-3"  
+class="td11"><span 
+class="cmr-9">Hz    </span></td><td  style="text-align:left;" id="TBL-3-20-4"  
+class="td11"><!--l. 173--><p class="noindent" >              </p></td><td  style="text-align:left;" id="TBL-3-20-5"  
+class="td11"><!--l. 173--><p class="noindent" ><span 
+class="cmr-9">Tone frequencies</span>           </p></td>
+</tr><tr 
+class="cline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-22-"><td colspan="5" style="text-align:left; white-space:nowrap;" id="TBL-3-22-1"  
+class="td11"><div class="multicolumn"  style="text-align:left; white-space:nowrap;"><span 
+class="cmti-9">Data</span></div>
+</td></tr><tr 
+class="cline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-24-"><td  style="text-align:left; white-space:nowrap;" id="TBL-3-24-1"  
+class="td11"><span 
+class="cmr-9">PHASE</span><span 
+class="cmr-9">_CAL                   </span></td><td  style="text-align:left;" id="TBL-3-24-2"  
+class="td11"><!--l. 173--><p class="noindent" ><span 
+class="cmr-9">Float(</span><!--l. 173--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>N</mi><mi 
+>r</mi></math><span 
+class="cmr-9">,</span>
+<span 
+class="cmr-9">num</span><span 
+class="cmr-9">_tones)</span>              </p></td><td  style="text-align:left; white-space:nowrap;" id="TBL-3-24-3"  
+class="td11">     </td><td  style="text-align:left;" id="TBL-3-24-4"  
+class="td11"><!--l. 173--><p class="noindent" >              </p></td><td  style="text-align:left;" id="TBL-3-24-5"  
+class="td11"><!--l. 173--><p class="noindent" ><span 
+class="cmr-9">Phase-Cal              tone</span>
+<span 
+class="cmr-9">measurements</span>              </p></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-25-"><td  style="text-align:left; white-space:nowrap;" id="TBL-3-25-1"  
+class="td11"><span 
+class="cmr-9">CABLE</span><span 
+class="cmr-9">_CAL                   </span></td><td  style="text-align:left;" id="TBL-3-25-2"  
+class="td11"><!--l. 173--><p class="noindent" ><span 
+class="cmr-9">Double(</span><!--l. 173--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>N</mi><mi 
+>r</mi></math><span 
+class="cmr-9">)</span> </p> </td> <td  style="text-align:left; white-space:nowrap;" id="TBL-3-25-3"  
+class="td11"><span 
+class="cmr-9">s </span></td> <td  style="text-align:left;" id="TBL-3-25-4"  
+class="td11"><!--l. 173--><p class="noindent" >              </p></td><td  style="text-align:left;" id="TBL-3-25-5"  
+class="td11"><!--l. 173--><p class="noindent" ><span 
+class="cmr-9">Cable delay</span>                 </p></td>
+</tr><tr 
+class="hline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-26-"><td  style="text-align:left; white-space:nowrap;" id="TBL-3-26-1"  
+class="td11">                        </td> </tr></table>
+</div>
+     <dl class="description"><dt class="description">
+<span 
+class="cmbx-9">Notes:</span> </dt><dd 
+class="description"><span 
+class="cmr-9">This sub-table contains signal chain phase calibration measurements.</span><br 
+class="newline" /><span 
+class="cmr-9">For further discussion of this table see casacore </span><a 
+href="https://github.com/casacore/casacore/issues/1165" ><span 
+class="cmr-9">Issue 1165</span></a><span 
+class="cmr-9">.</span>
+     </dd><dt class="description">
+<span 
+class="cmbx-9">ANTENNA</span><span 
+class="cmbx-9">_ID</span> </dt><dd 
+class="description"><span 
+class="cmr-9">Antenna identiﬁer, as indexed by ANTENNA</span><!--l. 182--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi></math>
+     <span 
+class="cmr-9">from MAIN.</span>
+     </dd><dt class="description">
+<span 
+class="cmbx-9">FEED</span><span 
+class="cmbx-9">_ID</span> </dt><dd 
+class="description"><span 
+class="cmr-9">Feed identiﬁer, as indexed from FEED</span><!--l. 184--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi></math>
+     <span 
+class="cmr-9">in MAIN. A value of -1 indicates the row is valid for all feeds.</span>
+     </dd><dt class="description">
+<span 
+class="cmbx-9">SPECTRAL</span><span 
+class="cmbx-9">_WINDOW</span><span 
+class="cmbx-9">_ID</span> </dt><dd 
+class="description"><span 
+class="cmr-9">Spectral window identiﬁer. A value of -1 indicates the row is valid for all spectral</span>
+     <span 
+class="cmr-9">windows.</span>
+     </dd><dt class="description">
+<span 
+class="cmbx-9">TIME</span> </dt><dd 
+class="description"><span 
+class="cmr-9">Mid-point of the time interval over which the data in the row are valid. Required to use the same TIME</span>
+     <span 
+class="cmr-9">Measure reference as in MAIN.</span>
+     </dd><dt class="description">
+<span 
+class="cmbx-9">INTERVAL</span> </dt><dd 
+class="description"><span 
+class="cmr-9">Time interval.</span>
+     </dd><dt class="description">
+<span 
+class="cmbx-9">NUM</span><span 
+class="cmbx-9">_TONES</span> </dt><dd 
+class="description"><span 
+class="cmr-9">Number of phase-cal tones that are measured. This number may vary by antenna, and may vary</span>
+     <span 
+class="cmr-9">by spectral window as well, especially if spectral windows of varying widths are supported.</span>
+     </dd><dt class="description">
+<span 
+class="cmbx-9">TONE</span><span 
+class="cmbx-9">_FREQUENCY</span> </dt><dd 
+class="description"><span 
+class="cmr-9">The sky frequencies of each measured phase-cal tone.</span>
+                                                                                         
+
+                                                                                         
+     </dd><dt class="description">
+<span 
+class="cmbx-9">PHASE</span><span 
+class="cmbx-9">_CAL</span> </dt><dd 
+class="description"><span 
+class="cmr-9">Phase calibration measurements. These are provided as complex values that represent both the phase</span>
+     <span 
+class="cmr-9">and amplitude for a measured phase-cal tone. Measurements are provided as a two-dimensional array such that</span>
+     <span 
+class="cmr-9">separate measurements can be provided for each receptor of a feed (so separate values for each polarization)</span>
+     <span 
+class="cmr-9">for each of the measured tones.</span>
+     </dd><dt class="description">
+<span 
+class="cmbx-9">CABLE</span><span 
+class="cmbx-9">_CAL</span> </dt><dd 
+class="description"><span 
+class="cmr-9">Cable calibration measurement. This is a measurement of the delay in the cable that provides the</span>
+     <span 
+class="cmr-9">reference signal to the receiver. There should be only a single reference signal per feed (even if that feed has</span>
+     <span 
+class="cmr-9">multiple receptors) so this is provided as a simple scalar.</span>
+     </dd></dl>
+<!--l. 227--><p class="noindent" >
+                                                                                         
+
+                                                                                         
+<a 
+ id="x1-5001r5"></a>
+</p>
+   <h4 class="subsectionHead"><span class="titlemark"><span 
+class="cmr-9">2.3   </span></span> <a 
+ id="x1-60003"></a><span 
+class="cmr-9">EARTH</span><span 
+class="cmr-9">_ORIENTATION: Earth orientation parameters</span></h4>
+   <div class="tabular"> <table id="TBL-4" class="tabular" 
+rules="groups" 
+><colgroup id="TBL-4-1g"><col 
+id="TBL-4-1" /></colgroup><colgroup id="TBL-4-2g"><col 
+id="TBL-4-2" /></colgroup><colgroup id="TBL-4-3g"><col 
+id="TBL-4-3" /></colgroup><colgroup id="TBL-4-4g"><col 
+id="TBL-4-4" /></colgroup><colgroup id="TBL-4-5g"><col 
+id="TBL-4-5" /></colgroup><tr 
+class="hline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-1-"><td colspan="5" style="text-align:center; white-space:nowrap;" id="TBL-4-1-1"  
+class="td11">              <div class="multicolumn"  style="text-align:center; white-space:nowrap;"><span 
+class="cmbx-9">EARTH</span><span 
+class="cmbx-9">_ORIENTATION: Earth orientation parameters</span></div>
+</td></tr><tr 
+class="cline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-3-"><td  style="text-align:center; white-space:nowrap;" id="TBL-4-3-1"  
+class="td11">      <div class="multicolumn"  style="text-align:center; white-space:nowrap;"><span 
+class="cmr-9">Name</span></div>          </td><td  style="text-align:center; white-space:nowrap;" id="TBL-4-3-2"  
+class="td11">      <div class="multicolumn"  style="text-align:center; white-space:nowrap;"><span 
+class="cmr-9">Format</span></div>          </td><td  style="text-align:center; white-space:nowrap;" id="TBL-4-3-3"  
+class="td11"><div class="multicolumn"  style="text-align:center; white-space:nowrap;"><span 
+class="cmr-9">Units</span></div></td><td  style="text-align:center; white-space:nowrap;" id="TBL-4-3-4"  
+class="td11">   <div class="multicolumn"  style="text-align:center; white-space:nowrap;"><span 
+class="cmr-9">Measure</span></div>     </td><td  style="text-align:center; white-space:nowrap;" id="TBL-4-3-5"  
+class="td11">      <div class="multicolumn"  style="text-align:center; white-space:nowrap;"><span 
+class="cmr-9">Comments</span></div>
+</td></tr><tr 
+class="cline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr 
+class="cline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-6-"><td colspan="5" style="text-align:left; white-space:nowrap;" id="TBL-4-6-1"  
+class="td11"><div class="multicolumn"  style="text-align:left; white-space:nowrap;"><span 
+class="cmbx-9">Columns</span></div></td></tr><tr 
+class="cline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr 
+class="cline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-9-"><td colspan="5" style="text-align:left; white-space:nowrap;" id="TBL-4-9-1"  
+class="td11"><div class="multicolumn"  style="text-align:left; white-space:nowrap;"><span 
+class="cmbx-9">Keys</span></div>
+</td></tr><tr 
+class="cline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-11-"><td  style="text-align:left; white-space:nowrap;" id="TBL-4-11-1"  
+class="td11"><span 
+class="cmr-9">TIME                   </span></td><td  style="text-align:left;" id="TBL-4-11-2"  
+class="td11"><!--l. 227--><p class="noindent" ><span 
+class="cmr-9">Double</span>                    </p></td><td  style="text-align:left; white-space:nowrap;" id="TBL-4-11-3"  
+class="td11"><span 
+class="cmr-9">s      </span></td><td  style="text-align:left;" id="TBL-4-11-4"  
+class="td11"><!--l. 227--><p class="noindent" ><span 
+class="cmr-9">EPOCH</span>          </p></td><td  style="text-align:left;" id="TBL-4-11-5"  
+class="td11"><!--l. 227--><p class="noindent" ><span 
+class="cmr-9">Time-stamp for values</span>   </p></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-12-"><td  style="text-align:left; white-space:nowrap;" id="TBL-4-12-1"  
+class="td11"><span 
+class="cmr-9">OBSERVATION</span><span 
+class="cmr-9">_ID</span></td><td  style="text-align:left;" id="TBL-4-12-2"  
+class="td11"><!--l. 227--><p class="noindent" ><span 
+class="cmr-9">Int</span>                         </p></td><td  style="text-align:left; white-space:nowrap;" id="TBL-4-12-3"  
+class="td11">     </td><td  style="text-align:left;" id="TBL-4-12-4"  
+class="td11"><!--l. 227--><p class="noindent" >              </p></td><td  style="text-align:left;" id="TBL-4-12-5"  
+class="td11"><!--l. 227--><p class="noindent" ><span 
+class="cmr-9">Points                      to</span>
+<span 
+class="cmr-9">OBSERVATION table</span>    </p></td>
+</tr><tr 
+class="cline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-14-"><td colspan="5" style="text-align:left; white-space:nowrap;" id="TBL-4-14-1"  
+class="td11"><div class="multicolumn"  style="text-align:left; white-space:nowrap;"><span 
+class="cmti-9">Data</span></div>
+</td></tr><tr 
+class="cline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-16-"><td  style="text-align:left; white-space:nowrap;" id="TBL-4-16-1"  
+class="td11"><span 
+class="cmr-9">UT1</span><span 
+class="cmr-9">_UTC             </span></td><td  style="text-align:left;" id="TBL-4-16-2"  
+class="td11"><!--l. 227--><p class="noindent" ><span 
+class="cmr-9">Double</span>                    </p></td><td  style="text-align:left; white-space:nowrap;" id="TBL-4-16-3"  
+class="td11"><span 
+class="cmr-9">s      </span></td><td  style="text-align:left;" id="TBL-4-16-4"  
+class="td11"><!--l. 227--><p class="noindent" >              </p></td><td  style="text-align:left;" id="TBL-4-16-5"  
+class="td11"><!--l. 227--><p class="noindent" ><span 
+class="cmr-9">UT1 - UTC</span>                 </p></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-17-"><td  style="text-align:left; white-space:nowrap;" id="TBL-4-17-1"  
+class="td11"><span 
+class="cmr-9">PM                      </span></td><td  style="text-align:left;" id="TBL-4-17-2"  
+class="td11"><!--l. 227--><p class="noindent" ><span 
+class="cmr-9">Double(2)</span>                </p></td><td  style="text-align:left; white-space:nowrap;" id="TBL-4-17-3"  
+class="td11"><span 
+class="cmr-9">rad   </span></td><td  style="text-align:left;" id="TBL-4-17-4"  
+class="td11"><!--l. 227--><p class="noindent" >              </p></td><td  style="text-align:left;" id="TBL-4-17-5"  
+class="td11"><!--l. 227--><p class="noindent" ><span 
+class="cmr-9">Celestial pole position</span>    </p></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-18-"><td  style="text-align:left; white-space:nowrap;" id="TBL-4-18-1"  
+class="td11"><span 
+class="cmr-9">TYPE                  </span></td><td  style="text-align:left;" id="TBL-4-18-2"  
+class="td11"><!--l. 227--><p class="noindent" ><span 
+class="cmr-9">String</span>                     </p></td><td  style="text-align:left; white-space:nowrap;" id="TBL-4-18-3"  
+class="td11">     </td><td  style="text-align:left;" id="TBL-4-18-4"  
+class="td11"><!--l. 227--><p class="noindent" >              </p></td><td  style="text-align:left;" id="TBL-4-18-5"  
+class="td11"><!--l. 227--><p class="noindent" ><span 
+class="cmr-9">Type of EOP value</span>       </p></td>
+</tr><tr 
+class="hline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-19-"><td  style="text-align:left; white-space:nowrap;" id="TBL-4-19-1"  
+class="td11">                 </td> </tr></table>
+</div>
+     <dl class="description"><dt class="description">
+<span 
+class="cmbx-9">Notes:</span> </dt><dd 
+class="description"><span 
+class="cmr-9">This sub-table contains the earth orientation parameters that were used to generate the correlator model.</span><br 
+class="newline" /><span 
+class="cmr-9">For further discussion of this table see casacore </span><a 
+href="https://github.com/casacore/casacore/issues/1307" ><span 
+class="cmr-9">Issue 1307</span></a><span 
+class="cmr-9">.</span>
+     </dd><dt class="description">
+<span 
+class="cmbx-9">TIME</span> </dt><dd 
+class="description"><span 
+class="cmr-9">Timestamp of the EOP values; this is expected to be the UTC time although some sources use TAI instead.</span>
+     </dd><dt class="description">
+<span 
+class="cmbx-9">OBSERVATION</span><span 
+class="cmbx-9">_ID</span> </dt><dd 
+class="description"><span 
+class="cmr-9">Observation identiﬁer (see the OBSERVATION table)</span>
+     </dd><dt class="description">
+<span 
+class="cmbx-9">UT1</span><span 
+class="cmbx-9">_UTC</span> </dt><dd 
+class="description"><span 
+class="cmr-9">Diﬀerence between UT1 and UTC (UT1 - UTC) in seconds.</span>
+     </dd><dt class="description">
+<span 
+class="cmbx-9">PM</span> </dt><dd 
+class="description"><span 
+class="cmr-9">Position of celestial pole; these are provided as X and Y components (in that order) in radians.</span>
+     </dd><dt class="description">
+<span 
+class="cmbx-9">TYPE</span> </dt><dd 
+class="description"><span 
+class="cmr-9">Type of the EOP value; Reserved keywords include: (”PREDICTED” - for predicted parameter values;</span>
+     <span 
+class="cmr-9">”PRELIMINARY” - for measured parameter values that are subject to further revision in the future; ”FINAL”</span>
+     <span 
+class="cmr-9">- for ﬁnal parameter values). If the type is not know this should be an empty string.</span>
+     </dd></dl>
+<a 
+ id="x1-6001r3"></a>
+   <h3 class="sectionHead"><span class="titlemark"><span 
+class="cmr-9">3   </span></span> <a 
+ id="x1-70003"></a><span 
+class="cmr-9">References</span></h3>
+<!--l. 257--><p class="noindent" ><span 
+class="cmr-9">Kemball, A.J., Wieringa, M.H., 2000, casacore Note 229.</span>
+</p>
+    
+</body></html> 
+
+                                                                                         
+
+
